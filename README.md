@@ -20,9 +20,11 @@ Steps :
           ex: mkdir ws
               cd  /ws
               gedit Dockerfile
+              
      2.Build or run created  image
           #docker build . -t  <image name>
            From this  <image name> we can create n no.of images
+           
       3. Lauch o.s from created image
          # docker  run -it --name <give name>  <image name>
   
@@ -32,14 +34,27 @@ Steps :
 Pushing image to dockerhub
 -
 1.Login with  your docker hub id (https://hub.docker.com/)
+
 2.create a repo
+
 3. Login to  local terminal 
+
 4.Navigate to  docker file location 
+
 5. Run this command to connect to your dockerhub account #docker login --username=<ur hub username>  enter the password
+          
 6.To list all the local docker images  # docker images
+
 7.Identify  the image name and image id which you want push to  docker hub  # docker tag <image id> <your hub username>/ <repo nme>:<commit name>
+          
 8.Now push your image to repo by running  # docker push <your hub username>/ <repo nme>
+          
 9.Upload will take  some time  based  on size of  image  and  bandwidth of internet 
+
+
+Feel free to  download same  image  from  -https://hub.docker.com/repository/docker/madhurikonnur/cnn_keras
+    
+    command  #docker pull madhurikonnur/cnn_keras:ver1
 
    
 
