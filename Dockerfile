@@ -13,6 +13,8 @@ RUN apt-get update -qq \
     # install essentials
     build-essential \
     g++ \
+    git \
+    apache2 \
     openssh-client \
     # install python 3
     python3 \
@@ -42,21 +44,14 @@ RUN pip3 --no-cache-dir install \
     scikit-learn \
     statsmodels \
     matplotlib \
-    Pillow 
+    Pillow \
+    papermill \
+    tensorflow==1.12.0 \
+    tensorflow-probability==0.5.0 \
+    keras==2.2.4 
 
 
-# installing  tensorflow 
-
-RUN pip3 --no-cache-dir install tensorflow
- 
-
-#installing keras
-
-RUN pip3 --no-cache-dir install keras
 
 #to provide the default command which is executed inside the container when it is created based on the image
 
-CMD ["python3"]
-    
-
-
+#CMD ["/bin/bash"]
